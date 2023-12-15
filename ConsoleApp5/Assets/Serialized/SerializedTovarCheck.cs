@@ -16,12 +16,12 @@ namespace ConsoleApp5.Assets.Serialized
         {
             string desktop = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             string json = JsonSerializer.Serialize(tovarChecks);
-            File.WriteAllText(desktop, json);
+            File.WriteAllText(desktop, json + "\\TovarCheck.json");
         }
         public static List<TovarCheck> MyDeserialize()
         {
             string desktop = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-            string json = File.ReadAllText(desktop);
+            string json = File.ReadAllText(desktop + "\\TovarCheck.json");
             List<TovarCheck> tovarChecks = JsonSerializer.Deserialize<List<TovarCheck>>(json);
             return tovarChecks;
         }

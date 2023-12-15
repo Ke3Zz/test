@@ -15,13 +15,63 @@ namespace ConsoleApp5.Assets.Crud
         public void Create()
         {
             Console.WriteLine("Введите айди пользователя");
-            polzovatel.polzovatelReg.ID = Convert.ToInt32(Console.ReadLine());
+            while (true)
+            {
+                int num;
+                var cash = Console.ReadLine();
+                if (int.TryParse(cash, out num))
+                {
+                    polzovatel.polzovatelReg.ID = num;
+                    break;
+                }
+                else
+                    Console.WriteLine("Введите целочисленный");
+            }
             Console.WriteLine("Введите логин пользователя");
-            polzovatel.polzovatelReg.Login = Console.ReadLine();
+            while (true)
+            {
+                int num;
+                var cash = Console.ReadLine();
+                if (int.TryParse(cash, out num))
+                {
+                    Console.WriteLine("Введите сторочно");
+                }
+                else
+                {
+                    polzovatel.polzovatelReg.Login = cash;
+                    break;
+                }
+            }
             Console.WriteLine("Введите пароль пользователя");
-            polzovatel.polzovatelReg.Password = Console.ReadLine();
+            while (true)
+            {
+                int num;
+                var cash = Console.ReadLine();
+                if (int.TryParse(cash, out num))
+                {
+                    Console.WriteLine("Введите сторочно");
+                }
+                else
+                {
+                    polzovatel.polzovatelReg.Password = cash;
+                    break;
+                }
+            }
             Console.WriteLine("Введите роль пользователя");
-            polzovatel.polzovatelReg.Role = Console.ReadLine();
+            while (true)
+            {
+                int num;
+                var cash = Console.ReadLine();
+                if (int.TryParse(cash, out num))
+                {
+                    Console.WriteLine("Введите сторочно");
+                }
+                else
+                {
+                    polzovatel.polzovatelReg.Role = cash;
+                    break;
+                }
+            }
             polzovatels.Add(polzovatel);
             SerializedPolzovatel.MySerialize(polzovatels);
             Console.Clear();
@@ -43,6 +93,69 @@ namespace ConsoleApp5.Assets.Crud
             Console.WriteLine("Введите роль пользователя");
             polzovatels[index].polzovatelReg.Role = Console.ReadLine();
             SerializedPolzovatel.MySerialize(polzovatels);
+
+            Console.WriteLine("Введите айди пользователя");
+            while (true)
+            {
+                int num;
+                var cash = Console.ReadLine();
+                if (int.TryParse(cash, out num))
+                {
+                    polzovatels[index].polzovatelReg.ID = num;
+                    break;
+                }
+                else
+                    Console.WriteLine("Введите целочисленный");
+            }
+            Console.WriteLine("Введите логин пользователя");
+            while (true)
+            {
+                int num;
+                var cash = Console.ReadLine();
+                if (int.TryParse(cash, out num))
+                {
+                    Console.WriteLine("Введите сторочно");
+                }
+                else
+                {
+                    polzovatels[index].polzovatelReg.Password = cash;
+                    break;
+                }
+            }
+            Console.WriteLine("Введите пароль пользователя");
+            while (true)
+            {
+                int num;
+                var cash = Console.ReadLine();
+                if (int.TryParse(cash, out num))
+                {
+                    Console.WriteLine("Введите сторочно");
+                }
+                else
+                {
+                    polzovatels[index].polzovatelReg.Password = cash;
+                    break;
+                }
+            }
+            Console.WriteLine("Введите роль пользователя");
+            while (true)
+            {
+                int num;
+                var cash = Console.ReadLine();
+                if (int.TryParse(cash, out num))
+                {
+                    Console.WriteLine("Введите сторочно");
+                }
+                else
+                {
+                    polzovatels[index].polzovatelReg.Role = cash;
+                    break;
+                }
+            }
+            polzovatels.Add(polzovatel);
+            SerializedPolzovatel.MySerialize(polzovatels);
+            Console.Clear();
+
         }
         public void Read()
         {

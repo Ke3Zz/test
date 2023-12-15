@@ -16,13 +16,65 @@ namespace ConsoleApp5.Assets.Crud
         {
             
             Console.WriteLine("Введите айди");
-            buchgalter.listBuchgalter.ID = Convert.ToInt32(Console.ReadLine());
+            while (true)
+            {
+                int num;
+                var cash = Console.ReadLine();
+                if (int.TryParse(cash, out num))
+                {
+                    buchgalter.listBuchgalter.ID = num;
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Введите целочисленный");
+                }
+            }
             Console.WriteLine("Введите Стоимость");
-            buchgalter.listBuchgalter.CostSumm = Convert.ToInt32(Console.ReadLine());
+            while (true)
+            {
+                int num;
+                var cash = Console.ReadLine();
+                if (int.TryParse(cash, out num))
+                {
+                    buchgalter.listBuchgalter.CostSumm = num;
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Введите целочисленный");
+                }
+            }
             Console.WriteLine("Введите тип");
-            buchgalter.listBuchgalter.type = Console.ReadLine();
+            while (true)
+            {
+                int num;
+                var cash = Console.ReadLine();
+                if (int.TryParse(cash, out num))
+                {
+                    Console.WriteLine("Введите сторочно");
+                }
+                else
+                {
+                    buchgalter.listBuchgalter.type = cash;
+                    break;
+                }
+            }
             Console.WriteLine("Введите дату");
-            buchgalter.listBuchgalter.date = Console.ReadLine();
+            while (true)
+            {
+                int num;
+                var cash = Console.ReadLine();
+                if (int.TryParse(cash, out num))
+                {
+                    Console.WriteLine("Введите сторочно");
+                }
+                else
+                {
+                    buchgalter.listBuchgalter.date = cash;
+                    break;
+                }
+            }
             buchgalters.Add(buchgalter);
             SerializedBuchgalter.MySerialize(buchgalters);
             Console.Clear();
@@ -36,13 +88,65 @@ namespace ConsoleApp5.Assets.Crud
         public void Update(int index)
         {
             Console.WriteLine("Введите айди");
-            buchgalters[index].listBuchgalter.ID = Convert.ToInt32(Console.ReadLine());
+            while (true)
+            {
+                int num;
+                var cash = Console.ReadLine();
+                if (int.TryParse(cash, out num))
+                {
+                    buchgalters[index].listBuchgalter.ID = num;
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Введите целочисленный");
+                }
+            }
             Console.WriteLine("Введите Стоимость");
-            buchgalters[index].listBuchgalter.CostSumm = Convert.ToInt32(Console.ReadLine());
+            while (true)
+            {
+                int num;
+                var cash = Console.ReadLine();
+                if (int.TryParse(cash, out num))
+                {
+                    buchgalters[index].listBuchgalter.CostSumm = num;
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Введите целочисленный");
+                }
+            }
             Console.WriteLine("Введите тип");
-            buchgalters[index].listBuchgalter.type = Console.ReadLine();
+            while (true)
+            {
+                int num;
+                var cash = Console.ReadLine();
+                if (int.TryParse(cash, out num))
+                {
+                    Console.WriteLine("Введите сторочно");
+                }
+                else
+                {
+                    buchgalters[index].listBuchgalter.type = cash;
+                    break;
+                }
+            }
             Console.WriteLine("Введите дату");
-            buchgalters[index].listBuchgalter.date = Console.ReadLine();
+            while (true)
+            {
+                int num;
+                var cash = Console.ReadLine();
+                if (int.TryParse(cash, out num))
+                {
+                    Console.WriteLine("Введите сторочно");
+                }
+                else
+                {
+                    buchgalters[index].listBuchgalter.date = cash;
+                    break;
+                }
+            }
             buchgalters.Add(buchgalter);
             SerializedBuchgalter.MySerialize(buchgalters);
             Console.Clear();

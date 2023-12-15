@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ke3Zz\\source\\repos\\ConsoleApp5\\ConsoleApp5\\ConsoleApp5.csproj",
+      "projectUniqueName": "C:\\Users\\Ke3Zz\\source\\repos\\ConsoleApp5\\test\\ConsoleApp5\\ConsoleApp5.csproj",
       "projectName": "ConsoleApp5",
-      "projectPath": "C:\\Users\\Ke3Zz\\source\\repos\\ConsoleApp5\\ConsoleApp5\\ConsoleApp5.csproj",
+      "projectPath": "C:\\Users\\Ke3Zz\\source\\repos\\ConsoleApp5\\test\\ConsoleApp5\\ConsoleApp5.csproj",
       "packagesPath": "C:\\Users\\Ke3Zz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ke3Zz\\source\\repos\\ConsoleApp5\\ConsoleApp5\\obj\\",
+      "outputPath": "C:\\Users\\Ke3Zz\\source\\repos\\ConsoleApp5\\test\\ConsoleApp5\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Ke3Zz\\AppData\\Roaming\\NuGet\\NuGet.Config",

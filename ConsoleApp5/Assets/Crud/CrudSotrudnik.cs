@@ -11,28 +11,121 @@ namespace ConsoleApp5.Assets.Crud
     internal class CrudSotrudnik : ICrud
     {
         public List<Sotrudnick> sotrudnicks = new List<Sotrudnick>();
-        Sotrudnick sotrudnick = new Sotrudnick();
+        
         public void Create()
         {
+            Sotrudnick sotrudnick = new Sotrudnick();
+            Console.WriteLine("Введите Айди сотрудника");
+                while (true)
+                {
+                    int num;
+                    var cash = Console.ReadLine();
+                    if (int.TryParse(cash, out num))
+                    {
+                        sotrudnick.listmembers.id = num;
+                        break;
+                    }
+                    else
+                    Console.WriteLine("Введите целочисленный");
+                }
 
-                Console.WriteLine("Введите Айди сотрудника");
-                sotrudnick.listmembers.id = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine("Введите Фамилию");
-                sotrudnick.listmembers.Familia = Console.ReadLine();
-                Console.WriteLine("Введите Имя");
-                sotrudnick.listmembers.Imya = Console.ReadLine();
-                Console.WriteLine("Введите Отчетсво");
-                sotrudnick.listmembers.Otchestvo = Console.ReadLine();
-                Console.WriteLine("Введите дату рождения");
-                sotrudnick.listmembers.DataRosh = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine("Введите должность");
-                sotrudnick.listmembers.Dolshnost = Console.ReadLine();
-                Console.WriteLine("Введите зарпалту");
-                sotrudnick.listmembers.ZP = Convert.ToDouble(Console.ReadLine());
-                sotrudnicks.Add(sotrudnick);
-            SerializedSotrudnick.MySerialize(sotrudnicks);
-                Console.Clear();
+                while (true)
+                {
+                    int num;
+                    var cash = Console.ReadLine();
+                    if (int.TryParse(cash, out num))
+                    {
+                    Console.WriteLine("Введите сторочно");
+                    }
+                    else
+                    {
+                    sotrudnick.listmembers.Familia = cash;
+                    break;
+                    }
+                }
 
+                Console.WriteLine("Введите Имя");
+                while (true)
+                {
+                    int num;
+                    var cash = Console.ReadLine();
+                    if (int.TryParse(cash, out num))
+                    {
+                        Console.WriteLine("Введите сторочно");
+                    }
+                    else
+                    {
+                        sotrudnick.listmembers.Imya = cash;
+                        break;
+                    }
+                }
+                
+                Console.WriteLine("Введите Отчетсво");
+                while (true)
+                {
+                    int num;
+                    var cash = Console.ReadLine();
+                    if (int.TryParse(cash, out num))
+                    {
+                        Console.WriteLine("Введите сторочно");
+                    }
+                    else
+                    {
+                        sotrudnick.listmembers.Otchestvo = cash;
+                        break;
+                    }
+                }
+                Console.WriteLine("Введите дату рождения");
+                while (true)
+                {
+                    int num;
+                    var cash = Console.ReadLine();
+                    if (int.TryParse(cash, out num))
+                    {
+                        sotrudnick.listmembers.DataRosh = num;
+                        break;
+                     }
+                    else
+                    {
+                        Console.WriteLine("Введите целочисленный");
+                    }
+                }
+                Console.WriteLine("Введите должность");
+                while (true)
+                {
+                        int num;
+                        var cash = Console.ReadLine();
+                        if (int.TryParse(cash, out num))
+                        {
+                            Console.WriteLine("Введите сторочно");
+                        }
+                        else
+                        {
+                            sotrudnick.listmembers.Dolshnost = cash;
+                            break;
+                        }
+                }
+                Console.WriteLine("Введите зарпалту");
+                while (true)
+                {
+                    int num;
+                    var cash = Console.ReadLine();
+                    if (int.TryParse(cash, out num))
+                    {
+                        
+                        sotrudnick.listmembers.ZP = num;
+                        break;
+                    }
+                    else
+                    {
+                    Console.WriteLine("Введите cмешанное число");
+                    }
+                }
+               
+                sotrudnicks.Add(sotrudnick);
+                SerializedSotrudnick.MySerialize(sotrudnicks);
+                Console.Clear();
         }
         public void Delete(int index)
         {
@@ -42,20 +135,115 @@ namespace ConsoleApp5.Assets.Crud
         }
         public void Update(int index)
         {
-            Console.WriteLine("Введите айди");
-            sotrudnicks[index].listmembers.id = Convert.ToInt32(Console.ReadLine());
+            Sotrudnick sotrudnick = new Sotrudnick();
+            Console.WriteLine("Введите Айди сотрудника");
+            while (true)
+            {
+                int num;
+                var cash = Console.ReadLine();
+                if (int.TryParse(cash, out num))
+                {
+                    sotrudnicks[index].listmembers.id = num;
+                    break;
+                }
+                else
+                    Console.WriteLine("Введите целочисленный");
+            }
+
             Console.WriteLine("Введите Фамилию");
-            sotrudnicks[index].listmembers.Familia = Console.ReadLine();
+            while (true)
+            {
+                int num;
+                var cash = Console.ReadLine();
+                if (int.TryParse(cash, out num))
+                {
+                    Console.WriteLine("Введите сторочно");
+                }
+                else
+                {
+                    sotrudnicks[index].listmembers.Familia = cash;
+                    break;
+                }
+            }
+
             Console.WriteLine("Введите Имя");
-            sotrudnicks[index].listmembers.Imya = Console.ReadLine();
+            while (true)
+            {
+                int num;
+                var cash = Console.ReadLine();
+                if (int.TryParse(cash, out num))
+                {
+                    Console.WriteLine("Введите сторочно");
+                }
+                else
+                {
+                    sotrudnicks[index].listmembers.Imya = cash;
+                    break;
+                }
+            }
+
             Console.WriteLine("Введите Отчетсво");
-            sotrudnicks[index].listmembers.Otchestvo = Console.ReadLine();
+            while (true)
+            {
+                int num;
+                var cash = Console.ReadLine();
+                if (int.TryParse(cash, out num))
+                {
+                    Console.WriteLine("Введите сторочно");
+                }
+                else
+                {
+                    sotrudnicks[index].listmembers.Otchestvo = cash;
+                    break;
+                }
+            }
             Console.WriteLine("Введите дату рождения");
-            sotrudnicks[index].listmembers.DataRosh = Console.ReadKey().KeyChar;
+            while (true)
+            {
+                int num;
+                var cash = Console.ReadLine();
+                if (int.TryParse(cash, out num))
+                {
+                    sotrudnicks[index].listmembers.DataRosh = num;
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Введите целочисленный");
+                }
+            }
             Console.WriteLine("Введите должность");
-            sotrudnicks[index].listmembers.Dolshnost = Console.ReadLine();
+            while (true)
+            {
+                int num;
+                var cash = Console.ReadLine();
+                if (int.TryParse(cash, out num))
+                {
+                    Console.WriteLine("Введите сторочно");
+                }
+                else
+                {
+                    sotrudnicks[index].listmembers.Dolshnost = cash;
+                    break;
+                }
+            }
             Console.WriteLine("Введите зарпалту");
-            sotrudnicks[index].listmembers.ZP = Convert.ToDouble(Console.ReadLine());
+            while (true)
+            {
+                int num;
+                var cash = Console.ReadLine();
+                if (int.TryParse(cash, out num))
+                {
+
+                    sotrudnicks[index].listmembers.ZP = num;
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Введите cмешанное число");
+                }
+            }
+            sotrudnicks.Add(sotrudnick);
             SerializedSotrudnick.MySerialize(sotrudnicks);
         }
         public void Read()

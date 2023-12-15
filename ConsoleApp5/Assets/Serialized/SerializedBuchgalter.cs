@@ -15,13 +15,13 @@ namespace ConsoleApp5.Assets.Serialized
         public static void MySerialize(List<Buchgalter> buchgalters)
         {
             string desktop = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-            string json = JsonSerializer.Serialize(buchgalters);
+            string json = JsonSerializer.Serialize(buchgalters + "\\Buchgalter.json");
             File.WriteAllText(desktop, json);
         }
         public static List<Buchgalter> MyDeserialize()
         {
             string desktop = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-            string json = File.ReadAllText(desktop);
+            string json = File.ReadAllText(desktop + "\\Buchgalter.json");
             List<Buchgalter> buchgalters = JsonSerializer.Deserialize<List<Buchgalter>>(json);
             return buchgalters;
         }

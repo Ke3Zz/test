@@ -14,16 +14,60 @@ namespace ConsoleApp5.Assets.Crud
         public Napitock napitock = new Napitock();
         public void Create()
         {
-            
-            Console.WriteLine("Введите наименнование напитка");
-            napitock.structNapitock.ID = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Введите наименнование напитка");
-            napitock.structNapitock.Name = Console.ReadLine();
+            Console.WriteLine("Введите айди напитка");
+            while (true)
+            {
+                int num;
+                var cash = Console.ReadLine();
+                if (int.TryParse(cash, out num))
+                {
+                    napitock.structNapitock.ID = num;
+                    break;
+                }
+                else
+                    Console.WriteLine("Введите целочисленный");
+            }
+            Console.WriteLine("Введите наименнование товара");
+            while (true)
+            {
+                int num;
+                var cash = Console.ReadLine();
+                if (int.TryParse(cash, out num))
+                {
+                    Console.WriteLine("Введите сторочно");
+                }
+                else
+                {
+                    napitock.structNapitock.Name = cash;
+                    break;
+                }
+            }
             Console.WriteLine("Введите стоимость");
-            napitock.structNapitock.Cost = Convert.ToInt32(Console.ReadLine());
+            while (true)
+            {
+                int num;
+                var cash = Console.ReadLine();
+                if (int.TryParse(cash, out num))
+                {
+                    napitock.structNapitock.Cost = num;
+                    break;
+                }
+                else
+                    Console.WriteLine("Введите целочисленный");
+            }
             Console.WriteLine("Введите количество");
-            napitock.structNapitock.much = Convert.ToInt32(Console.ReadLine());
-
+            while (true)
+            {
+                int num;
+                var cash = Console.ReadLine();
+                if (int.TryParse(cash, out num))
+                {
+                    napitock.structNapitock.much = num;
+                    break;
+                }
+                else
+                    Console.WriteLine("Введите целочисленный");
+            }
             napitocks.Add(napitock);
             SerializedNapitock.MySerialize(napitocks);
             Console.Clear();
@@ -35,14 +79,59 @@ namespace ConsoleApp5.Assets.Crud
         }
         public void Update(int index)
         {
-            Console.WriteLine("Введите наименнование напитка");
-            napitocks[index].structNapitock.ID = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Введите наименнование напитка");
-            napitocks[index].structNapitock.Name = Console.ReadLine();
+            while (true)
+            {
+                int num;
+                var cash = Console.ReadLine();
+                if (int.TryParse(cash, out num))
+                {
+                    napitocks[index].structNapitock.ID = num;
+                    break;
+                }
+                else
+                    Console.WriteLine("Введите целочисленный");
+            }
+            Console.WriteLine("Введите наименнование товара");
+            while (true)
+            {
+                int num;
+                var cash = Console.ReadLine();
+                if (int.TryParse(cash, out num))
+                {
+                    Console.WriteLine("Введите сторочно");
+                }
+                else
+                {
+                    napitocks[index].structNapitock.Name = cash;
+                    break;
+                }
+            }
             Console.WriteLine("Введите стоимость");
-            napitocks[index].structNapitock.Cost = Convert.ToInt32(Console.ReadLine());
+            while (true)
+            {
+                int num;
+                var cash = Console.ReadLine();
+                if (int.TryParse(cash, out num))
+                {
+                    napitocks[index].structNapitock.Cost = num;
+                    break;
+                }
+                else
+                    Console.WriteLine("Введите целочисленный");
+            }
             Console.WriteLine("Введите количество");
-            napitocks[index].structNapitock.much = Convert.ToInt32(Console.ReadLine());
+            while (true)
+            {
+                int num;
+                var cash = Console.ReadLine();
+                if (int.TryParse(cash, out num))
+                {
+                    napitocks[index].structNapitock.much = num;
+                    break;
+                }
+                else
+                    Console.WriteLine("Введите целочисленный");
+            }
         }
         public void Read()
         {

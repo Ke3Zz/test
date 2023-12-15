@@ -16,12 +16,12 @@ namespace ConsoleApp5.Assets.Serialized
         {
             string desktop = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             string json = JsonSerializer.Serialize(polzovatels);
-            File.WriteAllText(desktop, json);
+            File.WriteAllText(desktop + "\\Polzovatel.json", json);
         }
         public static List<Polzovatel> MyDeserialize()
         {
             string desktop = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-            string json = File.ReadAllText(desktop);
+            string json = File.ReadAllText(desktop + "\\Polzovatel.json");
             List<Polzovatel> polzovatels = JsonSerializer.Deserialize<List<Polzovatel>>(json);
             return polzovatels;
         }

@@ -16,14 +16,74 @@ namespace ConsoleApp5.Assets.Crud
         public void Create()
         {
             Console.WriteLine("Введите айди");
-            tovarCheck.listTovar.id = Convert.ToInt32(Console.ReadLine());
+            while (true)
+            {
+                int num;
+                var cash = Console.ReadLine();
+                if (int.TryParse(cash, out num))
+                {
+                    tovarCheck.listTovar.id = num;
+                    break;
+                }
+                else
+                    Console.WriteLine("Введите целочисленный");
+            }
+
             Console.WriteLine("Введите название");
-            tovarCheck.listTovar.name = Console.ReadLine();
+            while (true)
+            {
+                int num;
+                var cash = Console.ReadLine();
+                if (int.TryParse(cash, out num))
+                {
+                    Console.WriteLine("Введите сторочно");
+                }
+                else
+                {
+                    tovarCheck.listTovar.name = cash;
+                    break;
+                }
+            }
             Console.WriteLine("Введите стоимость");
-            tovarCheck.listTovar.costs = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Введите стоимость");
+            while (true)
+            {
+                int num;
+                var cash = Console.ReadLine();
+                if (int.TryParse(cash, out num))
+                {
+                    tovarCheck.listTovar.costs = num;
+                    break;
+                }
+                else
+                    Console.WriteLine("Введите целочисленный");
+            }
+            Console.WriteLine("Введите количество");
+            while (true)
+            {
+                int num;
+                var cash = Console.ReadLine();
+                if (int.TryParse(cash, out num))
+                {
+                    tovarCheck.listTovar.much = num;
+                    break;
+                }
+                else
+                    Console.WriteLine("Введите целочисленный");
+            }
             tovarCheck.listTovar.much = Convert.ToInt32(Console.ReadLine());
-            //tovarCheck.listTovar.muchInSklad
+            Console.WriteLine("Введите айди");
+            while (true)
+            {
+                int num;
+                var cash = Console.ReadLine();
+                if (int.TryParse(cash, out num))
+                {
+                    tovarCheck.listTovar.muchInSklad = num;
+                    break;
+                }
+                else
+                    Console.WriteLine("Введите целочисленный");
+            }
             tovarChecks.Add(tovarCheck);
             SerializedTovarCheck.MySerialize(tovarChecks);
             Console.Clear();
@@ -36,16 +96,75 @@ namespace ConsoleApp5.Assets.Crud
         }
         public void Update(int index)
         {
-            
             Console.WriteLine("Введите айди");
-            tovarChecks[index].listTovar.id = Convert.ToInt32(Console.ReadLine());
+            while (true)
+            {
+                int num;
+                var cash = Console.ReadLine();
+                if (int.TryParse(cash, out num))
+                {
+                    tovarChecks[index].listTovar.id = num;
+                    break;
+                }
+                else
+                    Console.WriteLine("Введите целочисленный");
+            }
+
             Console.WriteLine("Введите название");
-            tovarChecks[index].listTovar.name = Console.ReadLine();
+            while (true)
+            {
+                int num;
+                var cash = Console.ReadLine();
+                if (int.TryParse(cash, out num))
+                {
+                    Console.WriteLine("Введите сторочно");
+                }
+                else
+                {
+                    tovarChecks[index].listTovar.name = cash;
+                    break;
+                }
+            }
             Console.WriteLine("Введите стоимость");
-            tovarChecks[index].listTovar.costs = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Введите стоимость");
-            tovarChecks[index].listTovar.much = Convert.ToInt32(Console.ReadLine());
-            //tovarCheck.listTovar.muchInSklad
+            while (true)
+            {
+                int num;
+                var cash = Console.ReadLine();
+                if (int.TryParse(cash, out num))
+                {
+                    tovarChecks[index].listTovar.costs = num;
+                    break;
+                }
+                else
+                    Console.WriteLine("Введите целочисленный");
+            }
+            Console.WriteLine("Введите количество");
+            while (true)
+            {
+                int num;
+                var cash = Console.ReadLine();
+                if (int.TryParse(cash, out num))
+                {
+                    tovarChecks[index].listTovar.much = num;
+                    break;
+                }
+                else
+                    Console.WriteLine("Введите целочисленный");
+            }
+            tovarCheck.listTovar.much = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите айди");
+            while (true)
+            {
+                int num;
+                var cash = Console.ReadLine();
+                if (int.TryParse(cash, out num))
+                {
+                    tovarChecks[index].listTovar.muchInSklad = num;
+                    break;
+                }
+                else
+                    Console.WriteLine("Введите целочисленный");
+            }
             tovarChecks.Add(tovarCheck);
             SerializedTovarCheck.MySerialize(tovarChecks);
             Console.Clear();

@@ -11,10 +11,14 @@ namespace ConsoleApp5
         public string LoginMenu;
         public string PasswordMenu;
         public int globalList;
+
         public void Login()
         {
             Admin admin = new Admin();
             Manager manager = new Manager();
+            Kassa kassa = new Kassa();
+            Sklad sklad = new Sklad();
+            Buchgalter buchgalter = new Buchgalter();
             switch (LoginMenu)
             {
                 case "A":
@@ -48,6 +52,7 @@ namespace ConsoleApp5
                             globalList = 3;
                             Console.Clear();
                             Console.WriteLine($"Вы авторизовались как Менеджер склада логин {LoginMenu}");
+                            sklad.BuchgalterMenu();
                             break;
 
                     }
@@ -59,6 +64,7 @@ namespace ConsoleApp5
                             globalList = 4;
                             Console.Clear();
                             Console.WriteLine($"Вы авторизовались как Кассир логин {LoginMenu}");
+                            kassa.KassaMenu();
                             break;
 
                     }
@@ -69,11 +75,12 @@ namespace ConsoleApp5
                         case "B":
                             globalList = 5;
                             Console.Clear();
-                            Console.WriteLine($"Вы авторизовались как Кассир логин {LoginMenu}");
+                            Console.WriteLine($"Вы авторизовались как Бухгалтер логин {LoginMenu}");
+                            buchgalter.BuchgalterMenu();
                             break;
                     }
                     break;
-                default:
+                    default:
                     Console.Clear();
                     Console.WriteLine("Повторите авторизацию снова"+ "\n");
                     Console.WriteLine(" ");

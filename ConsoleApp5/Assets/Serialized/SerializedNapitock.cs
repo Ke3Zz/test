@@ -15,13 +15,13 @@ namespace ConsoleApp5.Assets.Serialized
         public static void MySerialize(List<Napitock> napitocks)
         {
             string desktop = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-            string json = JsonSerializer.Serialize(napitocks);
+            string json = JsonSerializer.Serialize(napitocks + "\\Napitock.json");
             File.WriteAllText(desktop, json);
         }
         public static List<Napitock> MyDeserialize()
         {
             string desktop = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-            string json = File.ReadAllText(desktop);
+            string json = File.ReadAllText(desktop + "\\Napitock.json");
             List<Napitock> napitocks = JsonSerializer.Deserialize<List<Napitock>>(json);
             return napitocks;
         }
