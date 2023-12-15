@@ -11,6 +11,7 @@ namespace ConsoleApp5.Assets.Classes
     {
         public void AdminMenu()
         {
+            MenuChose menuChose = new MenuChose();
             string[] menu = new string[] {"___Администрация___", "Создать", "Просмотреть", "Обновление", "Удаление",
                                           "___Бухгалтер___", "Создать", "Просмотреть", "Обновление", "Удаление",
                                           "___Кассир___", "Создать", "Просмотреть", "Обновление", "Удаление",
@@ -31,6 +32,9 @@ namespace ConsoleApp5.Assets.Classes
             {
                 while (true)
                 {
+                    Console.Clear();
+                    Console.WriteLine($"Вы авторизовались как Администратор  {menuChose.LoginMenu}");
+                    Console.WriteLine();
                     DrawMenu(menu, row, col, index);
                     switch (Console.ReadKey(true).Key)
                     {
@@ -212,6 +216,7 @@ namespace ConsoleApp5.Assets.Classes
                     }
                     static void DrawMenu(string[] items, int row, int col, int index)
                     {
+                        
                         Console.SetCursorPosition(col, row);
                         for (int i = 0; i < items.Length; i++)
                         {

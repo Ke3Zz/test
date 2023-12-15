@@ -19,6 +19,7 @@ namespace ConsoleApp5.Assets.Classes
             int index = 0;
             int Global = 0;
             CrudNapitock crudSotrudnik = new CrudNapitock();
+            MenuChose menuChose = new MenuChose();
             while (true)
             {
                 ConsoleKeyInfo cki = Console.ReadKey(true);
@@ -30,6 +31,9 @@ namespace ConsoleApp5.Assets.Classes
                 }
                 else
                 {
+                    Console.Clear();
+                    Console.WriteLine($"Вы авторизовались как Менеджер {menuChose.LoginMenu}");
+                    Console.WriteLine();
                     DrawMenu(menu, row, col, index);
                     switch (Console.ReadKey(true).Key)
                     {
